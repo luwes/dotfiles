@@ -6,11 +6,15 @@ git pull origin master;
 
 function doIt() {
 	rsync --exclude ".git/" \
+		--exclude "bin/" \
+		--exclude "init/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
+		--exclude "brew.sh" \
 		--exclude "README.md" \
 		--exclude "dotfiles.sublime-project" \
+		--exclude "dotfiles.sublime-workspace" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
