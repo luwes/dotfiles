@@ -1,3 +1,9 @@
 [alias]
 
 	sup = submodule update --init --recursive
+
+[core]
+
+	# Use custom `.gitignore` and `.gitattributes`
+	excludesfile = ~/.gitignore
+	#attributesfile = ~/.gitattributes
