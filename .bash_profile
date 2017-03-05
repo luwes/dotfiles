@@ -1,5 +1,8 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+export PATH="$PATH:`yarn global bin`";
+
+eval "$(rbenv init -)";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
