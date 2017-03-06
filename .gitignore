@@ -13,5 +13,6 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+*.sublime-project
 *.sublime-workspace
 .extra
