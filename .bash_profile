@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+export PATH="/usr/local/sbin:$PATH";
 export PATH="$PATH:`yarn global bin`";
 
 eval "$(rbenv init -)";
