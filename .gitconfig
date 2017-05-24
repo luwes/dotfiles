@@ -2,8 +2,26 @@
 
 	sup = submodule update --init --recursive
 
+	# diff pull request, it gives you pretty much the same diff that you'd get when viewing the PR on github
+	dpr = "!f() { local this_branch=$(git symbolic-ref --short HEAD); git diff \"$@\" $(git merge-base master $this_branch)...$this_branch; }; f"
+
+	# log pull request, it gives you a git log of all the commits just like in the github pr
+	lgpr = "!f() { local this_branch=$(git symbolic-ref --short HEAD); git log \"$@\" --first-parent --no-merges --stat $(git merge-base master $this_branch)..$this_branch; }; f"
+
 [core]
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
 	#attributesfile = ~/.gitattributes
+
+[user]
+	name = Wesley Luyten
+	email = wesley@vimeo.com
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
