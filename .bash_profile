@@ -2,6 +2,8 @@
 export PATH="$HOME/bin:$PATH";
 export PATH="/usr/local/sbin:$PATH";
 export PATH="$PATH:`yarn global bin`";
+export NODE_PATH="$HOME/.config/yarn/global/node_modules";
+export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules";
 
 eval "$(rbenv init -)";
 
