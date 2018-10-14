@@ -16,6 +16,7 @@ function doIt() {
 		--exclude "dotfiles.sublime-project" \
 		--exclude "dotfiles.sublime-workspace" \
 		--exclude "LICENSE-MIT.txt" \
+		--exclude "dotfiles.code-workspace" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }
