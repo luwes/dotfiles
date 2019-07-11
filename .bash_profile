@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+export PATH=$HOME/bin:$PATH;
+export PATH=/usr/local/Cellar/python@2/2.7.15/bin/python:$PATH
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
