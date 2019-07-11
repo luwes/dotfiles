@@ -2,8 +2,4 @@ export PATH="/usr/local/sbin:$PATH";
 export PATH="$PATH:`yarn global bin`";
 export NODE_PATH="$HOME/.config/yarn/global/node_modules";
 export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules";
-
-# Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin";
-
 eval "$(rbenv init -)";
